@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO List APP</title>
+
+    <script src="./script.js" defer></script>
+    <script src="./scr2.js" defer></script>
+    <link rel="stylesheet" href="./assets/index-a2bb1720.css">
+</head>
+
+<body class="bg-[url('./bg.jpg')] bg-no-repeat bg-cover bg-center min-h-screen bg-slate-600 bg-blend-multiply ">
+
+    <!-- HEADER (LOGO AND NAVBAR) -->
+    <header
+        class="bg-slate-900 bg-opacity-80 text-white px-4 py-6 flex items-center md:justify-start justify-between sticky top-0 ">
+        <div id="logo " class="leading-3 md:mx-8 min-w-max">
+            <span class="block text-lg font-bold md:text-xl">TODO</span>
+            <span class="font-mono text-sm tracking-widest md:text-base">NOTE</span>
+        </div>
+        <nav>
+            <div id="nav-line" class="gap-1.5 flex flex-col md:hidden">
+                <div class="nav-line w-10 h-1 rounded-sm bg-emerald-400 transition-all"></div>
+                <div class="nav-line w-10 h-1 rounded-sm bg-sky-100 transition-all"></div>
+                <div class="nav-line w-10 h-1 rounded-sm bg-sky-100 transition-all"></div>
+            </div>
+            <ul
+                class="md:flex absolute md:static w-full left-0 bg-slate-900 space-y-2 md:py-4 md:border-0 overflow-hidden transition-all md:transition-none md:z-0 md:h-fit md:w-fit md:space-y-0 text-center h-0 -z-10 top-24">
+                <li>
+                    <a href="/"
+                        class="mx-4 p-1.5 hover:shadow-md hover:shadow-slate-900 hover:rounded-md hover:bg-blue-800">New
+                        Note</a>
+                </li>
+                <li>
+                    <a href="./allnotes.html"
+                        class="mx-4 p-1.5 hover:shadow-md hover:shadow-slate-900 hover:rounded-md hover:bg-blue-800">All
+                        Notes</a>
+                </li>
+                <li>
+                    <a href="/search"
+                        class="mx-4 p-1.5 hover:shadow-md hover:shadow-slate-900 hover:rounded-md hover:bg-blue-800">Search
+                        Notes</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN SECTION (NOTES MAKING) -->
+    <main class="flex items-center w-full p-4 justify-center mt-8">
+
+        <div class="w-full max-w-xl lg:max-w-2xl xl:max-w-4xl max-xl:max-w-7xl bg-slate-900 bg-opacity-80 rounded-md"
+            id="notepad">
+            <div id="topbar" class="flex pt-4 px-4 w-full">
+                <div id="buttonstopbar" class="flex items-center gap-1">
+                    <div class="rounds rounded-full bg-slate-600 hover:bg-yellow-600 aspect-square w-4"></div>
+                    <div class="rounds rounded-full bg-slate-600 hover:bg-emerald-400 aspect-square w-4"></div>
+                    <div class="rounds rounded-full bg-slate-600 hover:bg-red-500 aspect-square w-4"></div>
+                </div>
+                <div id="titletopbar" class="text-white mx-auto ">
+                    <h1>
+                        <span>Untitled</span>
+                        <span> -- [Note]</span>
+                    </h1>
+                </div>
+            </div>
+            <div id="notespace" class="p-4 h-96">
+                <textarea name="note" id="note"
+                    class="min-w-full outline-none resize-none h-full p-3 rounded-md bg-slate-400 bg-opacity-30 text-lg tracking-wide text-white"></textarea>
+            </div>
+            <div id="belowbar" class="text-white relative pb-4 px-4 flex justify-end">
+                <button id="savenote" class="py-1 px-4 rounded-md bg-blue-800 hover:bg-blue-600">Save</button>
+                <div id="savedialogbox"
+                    class="absolute w-72 p-4 bg-slate-600 bottom-4 right-4 rounded-md flex-col gap-2 z-10 hidden">
+                    <label for="notename">Save as : </label>
+                    <input type="text" id="notename" placeholder="Enter title for this note"
+                        class="text-black w-full rounded-md p-1 outline-none font-mono" required>
+                    <button type="submit"
+                        class="py-1 px-4 rounded-md bg-blue-800 hover:bg-blue-600 ml-auto">Save</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
